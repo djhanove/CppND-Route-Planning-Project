@@ -24,25 +24,28 @@ git clone git@github.com:djhanove/CppND-Route-Planning-Project.git --recurse-sub
 
 * gcc/g++ >= 7.4.0
   * Linux: gcc / g++ is installed by default on most Linux distros
-	* You may have to update gcc to a newer version! [Follow this link for instructions] (https://tuxamito.com/wiki/index.php/Installing_newer_GCC_versions_in_Ubuntu)
+	* You may have to update gcc to a newer version! [Follow this link for instructions](https://tuxamito.com/wiki/index.php/Installing_newer_GCC_versions_in_Ubuntu)
 * IO2D
   * Installation instructions for all operating systems can be found [here](https://github.com/cpp-io2d/P0267_RefImpl/blob/master/BUILDING.md)
   * This library must be built in a place where CMake `find_package` will be able to find it
-	sudo apt update
-	sudo apt install build-essential
-	sudo apt install cmake
-	sudo apt install libcairo2-dev
-	sudo apt install libgraphicsmagick1-dev
-	sudo apt install libpng-dev
 
-	cd thirdparty
-	git clone --recurse-submodules https://github.com/cpp-io2d/P0267_RefImpl
-	cd P0267_RefImpl
-	mkdir Debug
-	cd Debug
-	cmake --config Debug "-DCMAKE_BUILD_TYPE=Debug" ..
-	cmake --build .
-	sudo make install
+After cloning this repo, navigate to the parent directory
+```	
+sudo apt update
+sudo apt install build-essential
+sudo apt install cmake
+sudo apt install libcairo2-dev
+sudo apt install libgraphicsmagick1-dev
+sudo apt install libpng-dev
+cd thirdparty
+git clone --recurse-submodules https://github.com/cpp-io2d/P0267_RefImpl
+cd P0267_RefImpl
+mkdir Debug
+cd Debug
+cmake --config Debug "-DCMAKE_BUILD_TYPE=Debug" ..
+cmake --build .
+sudo make install
+```
 
 ## Compiling and Running
 
